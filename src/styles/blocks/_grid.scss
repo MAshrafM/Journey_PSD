@@ -1,0 +1,21 @@
+.photo-grid {
+  margin-top: -80px;
+}
+.image-box {
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 40px);
+  margin: 20px;
+  max-height: 450px;
+  overflow: hidden;
+  float: left;
+  display: inline-block;
+  
+  @include breakpoint(landscape){
+    width: calc(33.3333% - 40px);
+  }
+  
+  img{
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,16 @@
+.footer {
+  background-color: $footer-bg;
+  color: #FFFFFF;
+  padding: 30px;
+  text-align: center;
+}
+.footer-navigation {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.footer-right{
+  li {
+    display: inline;
+  }
+}

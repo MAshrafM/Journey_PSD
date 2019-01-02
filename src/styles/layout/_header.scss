@@ -1,0 +1,29 @@
+.site-navigation {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 30px 1em;
+  
+  .site-header{
+    &-left {
+      display: inline-block;
+      
+      li {
+        line-height: 0;
+      }
+    }
+    
+    &-right {
+      display: inline-block;
+      float: right;
+      
+      li{
+        display: inline;
+        
+        a{
+          margin-left: 20px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

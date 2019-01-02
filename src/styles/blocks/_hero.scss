@@ -1,0 +1,41 @@
+.photo-hero {
+  background-color: $hero-bg;
+  min-height: 700px;
+  
+  @include breakpoint(portrait){
+    min-height: 600px;
+  }
+  
+  @include breakpoint(landscape){
+    min-height: 500px;
+  }
+  
+  @include breakpoint(tablet){
+    min-height: 700px;
+  }
+  
+  &-text{
+    padding: 0 20px;
+    
+    @include breakpoint(tablet){
+      width: 70%;
+      display: block;
+    }
+  }
+  
+  h1{
+    color: #FFFFFF;
+    margin: 1em 0 40px;
+    
+    span{
+      color: $hero-text;
+    }
+  }
+  
+  p{
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+}

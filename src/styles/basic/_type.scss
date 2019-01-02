@@ -47,7 +47,7 @@ p {
 a {
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-size: 16px;
-  color: #333333;
+  color: #fff;
   text-decoration: none!important;
 }
 
@@ -56,4 +56,8 @@ li {
   font-size: 16px;
   line-height: 23px;
   list-style: none;
+}
+
+input, textarea{
+  font-family: 'Open Sans', Helvetica, sans-serif;
 }
