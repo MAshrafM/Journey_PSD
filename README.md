@@ -3,7 +3,7 @@ A web design page presented by Codecademy in their Learn Color Design course. De
   
 ---  
   
-## Live Site  
+## [Live Site](https://mashrafm.github.io/Journey_PSD/)  
 
 ## Showcase  
-![view]()  
+![view](https://github.com/MAshrafM/Journey_PSD/blob/master/show.jpg)  
