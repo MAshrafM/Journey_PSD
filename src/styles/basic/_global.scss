@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  width: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  color: #9B9B9B;
+}
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+img{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button{
+  cursor: pointer;
+  font: {
+    family: inherit;
+    size: inherit;
+  }
+  line-height: inherit;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}

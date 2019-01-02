@@ -1,0 +1,95 @@
+@mixin vertical-align($position: relative){
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align($position: relative){  
+  position: $position;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin img-position($max-width: 200%, $max-height: 200%) {
+  position: relative;
+  overflow: hidden;
+  img {
+    @include position-absolute($top: 50%, $left: 50%);
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: $max-width;
+    max-height: $max-height;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin transform($args...){
+  -webkit-transform: $args;
+  -ms-transform: $args;
+  transform: $args;
+}
+
+@mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+@mixin user-select($args...){
+  -webkit-user-select: $args;
+  user-select: $args;
+}
+
+@mixin circle($diameter){
+  width: $diameter;
+  height: $diameter;
+  border-radius: 50%;
+}
+
+@mixin clearfix(){
+  &:after, &:before{
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@mixin breakpoint($point) {
+  @if $point == portrait {
+    @media (max-width: 576px) { @content; }
+  }
+   @else if $point == landscape {
+     @media (min-width: 576px) { @content ; }
+  }
+   @else if $point == tablet {
+     @media (min-width: 768px) { @content ; }
+  }
+    @else if $point == desktop {
+     @media (min-width: 992px) { @content ; }
+  }
+   @else if $point == lg-desktop {
+     @media (min-width: 1200px)  { @content ; }
+  }
+}
